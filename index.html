@@ -34,25 +34,48 @@
       </div>
     </header>
     <main id="main-content" role="main">
-      <h1 class="products-title">Cat Breeds</h1>
+      <div class="products-header">
+        <h1 class="products-title">Fruits & Smoothies</h1>
+        <button id="requestProductBtn" class="request-btn" aria-label="Request a custom product">📝 Request Product</button>
+      </div>
       <ul class="emoji-list" role="list" aria-label="Product list">
         <li>
-          <a href="product-maine-coon.html" class="emoji-box" aria-label="View Maine Coon product details">🐈‍⬛</a>
-          <a href="product-maine-coon.html">Go to Maine Coon</a>
+          <a href="product-apple.html" class="emoji-box" aria-label="View Apple product details">🍎</a>
+          <a href="product-apple.html">Go to Apple</a>
         </li>
         <li>
-          <a href="product-nordic-forest-cat.html" class="emoji-box" aria-label="View Nordic Forest Cat product details">🐱</a>
-          <a href="product-nordic-forest-cat.html">Go to Nordic Forest Cat</a>
+          <a href="product-banana.html" class="emoji-box" aria-label="View Banana product details">🍌</a>
+          <a href="product-banana.html">Go to Banana</a>
         </li>
         <li>
-          <a href="product-british-shorthair.html" class="emoji-box" aria-label="View British Shorthair product details">😺</a>
-          <a href="product-british-shorthair.html">Go to British Shorthair</a>
-        </li>
-        <li>
-          <a href="product-bengal.html" class="emoji-box" aria-label="View Bengal product details">🐈</a>
-          <a href="product-bengal.html">Go to Bengal</a>
+          <a href="product-lemon.html" class="emoji-box" aria-label="View Lemon product details">🍋</a>
+          <a href="product-lemon.html">Go to Lemon</a>
         </li>
       </ul>
+      <!-- Product Request Modal -->
+      <div id="requestModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalTitle">Request a Product</h2>
+            <button id="closeModal" class="close-btn" aria-label="Close modal">&times;</button>
+          </div>
+          <form id="requestForm" role="form">
+            <div class="form-group">
+              <label for="productName">Product Name *</label>
+              <input type="text" id="productName" name="productName" required aria-required="true" placeholder="e.g., Siamese Cat" />
+            </div>
+            <div class="form-group">
+              <label for="productDesc">Description</label>
+              <textarea id="productDesc" name="productDesc" placeholder="Tell us more about what you're looking for..." rows="4"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="productLink">Reference Link</label>
+              <input type="url" id="productLink" name="productLink" placeholder="https://example.com" />
+            </div>
+            <button type="submit" class="submit-btn">Add to Basket</button>
+          </form>
+        </div>
+      </div>
     </main>
     <footer>
       <a
